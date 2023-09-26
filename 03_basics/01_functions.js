@@ -46,3 +46,39 @@ function username(username)
 
 let message = username("Ankit");
 console.log(message);
+
+
+//Rest operator is used to pass multiple arguments to a function. It is represented by three dots(...).
+function item_prices(...prices)
+{
+    return prices;
+}
+
+let result = item_prices(500, 700, 200, 600, 300);
+console.log(result);
+
+
+//Object in functions
+const obj1 = {
+    day: "Tuesday",
+    month: "September",
+    year: 2023
+}
+
+function printdate(object)
+{
+    console.log(`The day is ${object.day} and the month is ${object.month} of the year ${object.year}.`);
+}
+
+printdate(obj1); //The complete body of the object can also be passed as an argument while calling the function.
+
+
+//Array in functions
+const arr = [1,2,3,4,5];
+
+function printarray(array)
+{
+    console.log(`The second element of array is: ${array[1]}`);
+}
+
+printarray(arr); //The complete body of the array can also be passed as an argument while calling the function.
