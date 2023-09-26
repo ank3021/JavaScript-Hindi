@@ -41,3 +41,25 @@ console.log(Object.entries(user));//Returns an array of key/values of the enumer
 
 console.log(user.hasOwnProperty('name'));//Determines whether an object has a property with the specified name.
 console.log(user.hasOwnProperty('isLogged'));
+
+
+//Object destructuring
+const course = {
+    name: "JavaScript in Hindi",
+    price: "free",
+    teacher: "Hitesh Choudhary"
+}
+
+const {name: course_name} = course;//Object destructuring is used to extract properties from an object and assign them to variables.
+console.log(course_name);//Object destructuring
+console.log(course.name);//Dot notation
+
+
+//When data is fetched from an API, then the data is in json format. To convert the json data into an object, we use JSON.parse() method.
+
+/*{
+    "name": "Harry Kane",
+    "age": 28,
+    "team": "Bayern Munich",
+    "nationality": "English"
+}*/
