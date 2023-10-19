@@ -3,7 +3,7 @@
 
 //for loop
 
-//It is used to prinnt first 10 natural numbers.
+//It is used to print first 10 natural numbers.
 //The scope of each variable defined in the for loop is restricted within the braces of the loop.
 for (let i = 1; i <= 10; i++) {
     const element = i;
