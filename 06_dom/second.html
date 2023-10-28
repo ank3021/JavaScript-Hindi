@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM with chai aur code</title>
+</head>
+<body>
+    <div class = "container">
+        <ol>
+            <li class = "item">Monday</li>
+            <li class = "item">Tuesday</li>
+            <li class = "item">Wednesday</li>
+            <li class = "item">Thursday</li>
+            <li class = "item">Friday</li>
+        </ol>
+    </div>
+</body>
+
+<script>
+    let element = document.querySelector("div");
+    console.log(element);
+
+    /*let firstchild = element.children[0].children[0];
+    console.log(firstchild);
+
+    let secondchild = element.children[0].children[1];
+    console.log(secondchild);*/
+
+    let i = 0;
+    while (i <= 4)
+    {
+        console.log(element.children[0].children[i]);
+        ++i;
+    }
+
+    i = 0;
+    while(i <= 4)
+    {
+        console.log(element.children[0].children[i].innerText);
+        ++i;
+    }
+
+    console.log(element.children[0].firstElementChild.innerHTML);
+    console.log(element.children[0].lastElementChild.innerHTML);
+
+    element.children[0].children[3].style.color = "orange";
+    element.children[0].children[3].style.backgroundColor = "black";
+    element.children[0].children[3].style.borderwidth = "25px";
+    element.children[0].children[3].style.borderRadius = "10px";
+    element.children[0].children[3].style.borderColor = "pink";
+    element.children[0].children[3].style.borderStyle = "inset";
+
+    console.log(element.children[0].children[4].parentElement);
+    console.log(element.children[0].children[4].parentElement.parentElement);
+    console.log(element.children[0].children[4].previousElementSibling);
+    console.log(element.children[0].children[3].nextElementSibling);
+
+    element.children[0].appendChild(element.children[0].children[4].cloneNode(true));
+
+
+</script>
+
+</html>
