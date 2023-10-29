@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new element in DOM</title>
+</head>
+<body>
+    <div class = "container">
+        <h1 class = "heading"id = "first">This is the first heading.</h1>
+        <h2 class = "heading"id = "second">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+        <h3 class = "heading"id = "third">Dolor, nobis! Maiores, similique quasi necessitatibus ad,</h3>
+        <h4 class = "heading"id = "fourth">laudantium eos fugiat distinctio,</h4>
+        <h5 class = "heading"id = "fifth">impedit perspiciatis reiciendis dolorum praesentium labore doloremque numquam dicta culpa repellat!</h5>
+
+    </div>
+</body>
+
+<script>
+    const h6 = document.createElement('h6');
+    h6.className = "heading";
+    h6.id = 'sixth';
+    console.log(h6);
+    const innerText = document.createTextNode('loreum ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.');
+    h6.appendChild(innerText);
+    document.body.appendChild(h6);
+
+
+    const div = document.createElement('div');
+    div.className = 'container2';
+    div.id = Math.round(Math.random()*10 + 1);
+    console.log(div);
+    
+    div.setAttribute('title', 'created by DOM');
+    div.setAttribute('class', 'container2 in DOM');
+
+    div.style.color = 'red';
+    div.style.backgroundColor = 'lightgreen';
+    div.style.border = '15px outset orange';
+    div.style.borderRadius = '10px';
+
+    const innerText2 = document.createTextNode('This is created by using DOM !!!!');
+    div.appendChild(innerText2);
+    document.body.appendChild(div);
+</script>
+</html>
