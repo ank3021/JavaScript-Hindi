@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and remove elements in DOM</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class = "heading" id = "topic">The list of languages are as follows: </h2>
+        <ul class = "languages">
+             <li>C</li>
+             <li>C++</li>
+             <li>Python</li>
+
+        </ul>
+    </div>
+</body>
+
+<script>
+
+   //Add items using DOM
+    function additem(langName)
+    {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.languages').appendChild(li);
+    }
+
+    additem('Java');
+    additem('C#');
+
+    function additem2(langName)
+    {
+        const li = document.createElement('li');
+        const addText = document.createTextNode(`${langName}`);
+        li.appendChild(addText);
+        document.querySelector('.languages').appendChild(li);
+    }
+
+    additem2('JavaScript');
+    additem2('TypeScript');
+
+
+   //Edit items using DOM
+    const secondli = document.querySelector('li:nth-child(2)');
+    const newli = document.createElement('li');
+    newli.textContent = 'Golang';
+    secondli.replaceWith(newli);
+
+    const thirdli = document.querySelector('li:nth-child(3)');
+    const newli2 = document.createElement('li');
+    newli2.appendChild(document.createTextNode('PHP'));
+    thirdli.replaceWith(newli2);
+
+    const lastli = document.querySelector('li:last-child');
+    lastli.outerHTML = '<li>DotNet</li>'
+
+
+   //Remove items using DOM
+     const firstli = document.querySelector('li:first-child');
+     firstli.remove();
+</script>
+</html>
